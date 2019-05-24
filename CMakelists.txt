@@ -17,7 +17,7 @@ add_executable(classMock_Example_target
         ${CMAKE_CURRENT_SOURCE_DIR}/ClassMock_Example/ClassesToMock.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ClassMock_Example/ClassToTest.hh
         ${CMAKE_CURRENT_SOURCE_DIR}/ClassMock_Example/ClassToTest.cpp)
-
+include_directories(classMock_Example_target ${CMAKE_CURRENT_SOURCE_DIR}/ClassMock_Example)
 
 ##
 ## In This example we give the target that contains the code we want to test, if the target contains a main (if it is an executable) it is required to provide
@@ -49,6 +49,7 @@ add_executable(static-Free_FunctionMock_Example_target
         ${CMAKE_CURRENT_SOURCE_DIR}/Static-Free_FunctionMock_Example/FreeFunction.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/Static-Free_FunctionMock_Example/include/ClassToTest.hh
         ${CMAKE_CURRENT_SOURCE_DIR}/Static-Free_FunctionMock_Example/ClassToTest.cpp)
+include_directories(static-Free_FunctionMock_Example_target ${CMAKE_CURRENT_SOURCE_DIR}/Static-Free_FunctionMock_Example/include/)
 
 ##
 ## In This example we directly specify where is the include folders and what are the source to compile
