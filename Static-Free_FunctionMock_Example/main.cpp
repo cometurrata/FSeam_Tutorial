@@ -1,5 +1,5 @@
 #include <iostream>
-#include <ClassToTest.hh>
+#include "include/ClassToTest.hh"
 
 int main() {
     ClassToTest classTesting {};

@@ -1,5 +1,6 @@
  #include <StaticFunction.hh>
- 
+
+
  std::vector<std::string> DatabaseAccessor::getAllGames() {
      // Imagine singleton access to a database
      return {"StarcraftII", "WarcraftIII", "Tales Of Symphonia", "FreeYourSoulMMORPG", "Final Fantasy"};

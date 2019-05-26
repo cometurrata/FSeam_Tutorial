@@ -7,10 +7,10 @@ bool GamesOfThronesDatabase::isPlayerWinnerOfGamesOfThrones(const std::string &p
 
 std::vector<int> GamesOfThronesDatabase::getNotSoGoodSeasons(int season) {
     // imagine a db connection
-    return {1, 2, 3, 4};
+    return {42, 1337};
 }
 
 std::vector<int> GamesOfThronesDatabase::getGoodSeasons(int season) {
     // imagine a db connection
-    return { 42, 1337 };
+    return {1, 2, 3, 4};
 }
