@@ -88,7 +88,7 @@ TEST_CASE("Class Mock Specific Instance") {
         fseamMock_CoucheBase->dupeReturn<FSeam::GamesOfThronesDatabase::getGoodSeasons>(std::vector<int>({1,2,3,4,5,6}));
         fseamMock_CoucheBase->dupeReturn<FSeam::GamesOfThronesDatabase::getNotSoGoodSeasons>(std::vector<int>({1,2,3,4,5,6}));
 
-        REQUIRE_THROWS(testingClass.isGoodGamesOfThroneSeason(1));
+        REQUIRE_THROWS_WITH(testingClass.isGoodGamesOfThroneSeason(1), Catch::Contains("Database incoherency"));
 
         // Because data are present in the cache, SQL connector is never called
         REQUIRE(fseamMock_SqlDatabase->verify(FSeam::GamesOfThronesDatabase::getGoodSeasons::NAME, FSeam::NeverCalled{}));
@@ -99,7 +99,7 @@ TEST_CASE("Class Mock Specific Instance") {
         fseamMock_CoucheBase->dupeReturn<FSeam::GamesOfThronesDatabase::getGoodSeasons>(std::vector<int>({1,2,3,4,5,6}));
         fseamMock_CoucheBase->dupeReturn<FSeam::GamesOfThronesDatabase::getNotSoGoodSeasons>(std::vector<int>({8}));
 
-        REQUIRE_THROWS(testingClass.isGoodGamesOfThroneSeason(7));
+        REQUIRE_THROWS_WITH(testingClass.isGoodGamesOfThroneSeason(7), Catch::Contains("The season is not referenced"));
 
         // Because data are present in the cache, SQL connector is never called
         REQUIRE(fseamMock_SqlDatabase->verify(FSeam::GamesOfThronesDatabase::getGoodSeasons::NAME, FSeam::NeverCalled{}));
