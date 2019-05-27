@@ -5,7 +5,6 @@
 
 using namespace FSeam;
 
-
 TEST_CASE("Test Mocking default behavior on class") {
 
     // Create the TestingClass
