@@ -15,5 +15,5 @@ bool ClassToTest::isOneOfBestGameInTheWorld(const std::string &user, const std::
 
 bool ClassToTest::isFavoriteNumber(int number) {
     int random = generateRandomNumber();
-    return (random + number) % 2;
+    return number == random;
 }
