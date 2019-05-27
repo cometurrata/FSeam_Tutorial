@@ -8,8 +8,8 @@ TEST_CASE("StaticFunction") {
     auto mockStaticFunctions = FSeam::getFreeFunc(); // static functions are considered as free functions
 
     SECTION("Check call") {
-//        mockStaticFunctions->dupeReturn<FSeam::FreeFunction::getAllGames>(std::vector<std::string>({"FyS", "SC2"}));
-//        mockStaticFunctions->dupeReturn<FSeam::FreeFunction::getFavoriteGameForUser>(std::vector<std::string>({"SC2"}));
+        mockStaticFunctions->dupeReturn<FSeam::FreeFunction::getAllGames>(std::vector<std::string>({"FyS", "SC2"}));
+        mockStaticFunctions->dupeReturn<FSeam::FreeFunction::getFavoriteGameForUser>(std::vector<std::string>({"SC2"}));
 
         REQUIRE(testingClass.isOneOfBestGameInTheWorld("UserName", "SC2"));
         REQUIRE_FALSE(testingClass.isOneOfBestGameInTheWorld("UserName", "FyS"));

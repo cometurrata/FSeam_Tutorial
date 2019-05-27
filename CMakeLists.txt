@@ -71,7 +71,8 @@ addFSeamTests(
 ##
 addFSeamTests(
     DESTINATION_TARGET testFSeam_3 # FSeam testing binary target created for this testcase
-    SOURCE_AS_TARGET ${CMAKE_CURRENT_SOURCE_DIR}/Static-Free_FunctionMock_Example/ClassToTest.cpp
+    FILES_AS_SOURCE
+        ${CMAKE_CURRENT_SOURCE_DIR}/Static-Free_FunctionMock_Example/ClassToTest.cpp
     FOLDER_INCLUDES  ${CMAKE_CURRENT_SOURCE_DIR}/Static-Free_FunctionMock_Example/include
     TST_SRC
         ${CMAKE_CURRENT_SOURCE_DIR}/test.cpp

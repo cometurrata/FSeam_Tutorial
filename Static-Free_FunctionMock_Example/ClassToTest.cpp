@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <FreeFunction.hh>
 #include <StaticFunction.hh>
+#include <iostream>
 #include "include/ClassToTest.hh"
 
 bool ClassToTest::isOneOfBestGameInTheWorld(const std::string &user, const std::string &game) {
@@ -10,7 +11,7 @@ bool ClassToTest::isOneOfBestGameInTheWorld(const std::string &user, const std::
     std::vector<std::string> favoriteGames = DatabaseAccessor::getFavoriteGameForUser(user, game);
     if (favoriteGames.empty())
         throw std::string("Really?...");
-    return std::find_first_of(games.begin(), games.end(), favoriteGames.begin(), favoriteGames.end()) != games.end();
+    return std::find(favoriteGames.begin(), favoriteGames.end(), game) != favoriteGames.end();
 }
 
 bool ClassToTest::isFavoriteNumber(int number) {
