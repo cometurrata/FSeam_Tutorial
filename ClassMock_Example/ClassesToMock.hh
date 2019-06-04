@@ -3,9 +3,9 @@
 #include <vector>
 #include <string>
 
-class GamesOfThronesDatabase {
+class GamesOfThroneDatabase {
 public:
-    bool isPlayerWinnerOfGamesOfThrones(const std::string &name);
+    bool isPlayerWinnerOfGamesOfThrone(const std::string &name);
 
     std::vector<int> getGoodSeasons(int season);
     std::vector<int> getNotSoGoodSeasons(int season);
