@@ -3,7 +3,7 @@
 
 int main() {
     ClassToTest classTesting {};
-    std::cout << "classTesting.isWinnerOfGameOfThrone() " << classTesting.isWinnerOfGameOfThrone("Daenarys") << "\n";
-    std::cout << "classTesting.isGoodGameOfThroneSeason() " << classTesting.isGoodGameOfThroneSeason(1) << "\n";
+    std::cout << "classTesting.isWinnerOfGameOfThrones() " << classTesting.isWinnerOfGameOfThrones("Daenarys") << "\n";
+    std::cout << "classTesting.isGoodGameOfThronesSeason() " << classTesting.isGoodGameOfThronesSeason(1) << "\n";
     return 0;
 }

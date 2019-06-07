@@ -7,12 +7,12 @@
 class ClassToTest {
     
 public:
-    bool isWinnerOfGameOfThrone(const std::string &name) {
-        GameOfThroneDatabase databaseConnectionHandler; // A new database connection is created out of the blue
-        return databaseConnectionHandler.isPlayerWinnerOfGameOfThrone(name);
+    bool isWinnerOfGameOfThrones(const std::string &name) {
+        GameOfThronesDatabase databaseConnectionHandler; // A new database connection is created out of the blue
+        return databaseConnectionHandler.isPlayerWinnerOfGameOfThrones(name);
     }
 
-    bool isGoodGameOfThroneSeason(int season) {
+    bool isGoodGameOfThronesSeason(int season) {
         std::vector<int> goodSeason = _dbCouchbase.getGoodSeasons(season);
         std::vector<int> underwhelmingSeason = _dbCouchbase.getNotSoGoodSeasons(season);
 
@@ -36,10 +36,10 @@ public:
         throw std::string("The season is not referenced");
     }
 
-    GameOfThroneDatabase &getDbSql() { return _dbSql; }
-    GameOfThroneDatabase &getDbCouchbase() { return _dbCouchbase; }
+    GameOfThronesDatabase &getDbSql() { return _dbSql; }
+    GameOfThronesDatabase &getDbCouchbase() { return _dbCouchbase; }
 
 private:
-    GameOfThroneDatabase _dbSql;
-    GameOfThroneDatabase _dbCouchbase;
+    GameOfThronesDatabase _dbSql;
+    GameOfThronesDatabase _dbCouchbase;
 };
